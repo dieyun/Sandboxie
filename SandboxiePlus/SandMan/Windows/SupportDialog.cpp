@@ -64,7 +64,7 @@ bool CSupportDialog::CheckSupport(bool bOnRun)
 
 	QDateTime CurretnDate = QDateTime::currentDateTimeUtc();
 	int Days = InstallDate.daysTo(CurretnDate);
-
+	Days=1;
 	BYTE CertBlocked = 0;
 	theAPI->GetSecureParam("CertBlocked", &CertBlocked, sizeof(CertBlocked));
 	if (CertBlocked)
